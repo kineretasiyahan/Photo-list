@@ -19,7 +19,7 @@ const AppRouter = () => {
         <div>
             <Switch>
                 <Route exact path="/Photo-list" ><Home setData={setData} data={data}/></Route>
-                <Route path="/AddPhoto" ><AddPhoto setData={setData} data={data}/></Route>
+                <Route path="/Photo-list/Photo-list/AddPhoto" ><AddPhoto setData={setData} data={data}/></Route>
                 <Route path='/Photo-list/CurrentPhoto' ><CurrentPhoto setData={setData} data={data}/></Route>
             </Switch>
         </div>
