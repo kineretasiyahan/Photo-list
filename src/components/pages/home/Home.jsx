@@ -32,7 +32,7 @@ const Home = ({ data, setData }) => {
         <div>
           <div className="header">
             <h1>PHOTO LIST</h1>
-            <Link to={"./Photo-list/AddPhoto"}>
+            <Link to={"./AddPhoto"}>
               <Button type={"button"} text={"Add new photo"}></Button>
             </Link>
           </div>
