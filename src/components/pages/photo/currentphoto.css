@@ -1,0 +1,9 @@
+.anticon svg{
+    display: none !important;
+}
+.ant-modal-footer{
+    display: none !important;
+}
+.ant-modal-body{
+    background-color: rgba(0, 0, 0, 0.479);
+}

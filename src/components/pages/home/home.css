@@ -1,0 +1,30 @@
+body{
+  background-image: url("https://images.pexels.com/photos/1231171/pexels-photo-1231171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+  background-attachment: fixed;
+ 
+  /* background-color: white; */
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background:#ecf1f5;
+  
+}
+.cards-container > div {
+  width: 350px;
+  margin: 5px;
+  
+}
+.header {
+  text-align: center;
+  height: 20vh;
+  background-color: rgba(0, 0, 0, 0.938);
+ 
+}
+.header > h1{
+  color: white !important;
+}

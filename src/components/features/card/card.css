@@ -1,0 +1,11 @@
+.ant-card{
+    background:rgba(190, 192, 192, 0.418) !important;
+    border: none !important;
+    color: white;
+}
+.ant-card-head{
+    border-bottom: none !important;
+}
+a{
+    color: black !important;
+}
