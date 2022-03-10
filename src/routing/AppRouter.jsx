@@ -13,11 +13,12 @@ const AppRouter = () => {
         .catch((error) => {
           return error;
         });
+        console.log(data);
       }, []);
     return (
         <div>
             <Switch>
-                <Route exact path="/" ><Home setData={setData} data={data}/></Route>
+                <Route exact path="/Photo-list" ><Home setData={setData} data={data}/></Route>
                 <Route path="/AddPhoto" ><AddPhoto setData={setData} data={data}/></Route>
                 <Route path='/CurrentPhoto' ><CurrentPhoto setData={setData} data={data}/></Route>
             </Switch>

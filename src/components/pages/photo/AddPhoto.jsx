@@ -60,7 +60,7 @@ const AddPhoto = ({ data, setData }) => {
         Thumbnail Url:
         <Input type={"url"} name={"thumbnailUrl"} handleChange={handleChange} />
         <Button type={"submit"} text={"Add"} onClickHandler={addNewPhoto} />
-        <Link to={"/"}>
+        <Link to={"/Photo-list"}>
           <Button type={"button"} text={"Cancle"} />
         </Link>
       </form>
