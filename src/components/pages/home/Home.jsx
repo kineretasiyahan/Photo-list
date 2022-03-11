@@ -4,6 +4,7 @@ import Button from "../../features/button/Button";
 import CurrentPhoto from "../photo/CurrentPhoto";
 import "./home.css";
 import { Link } from "react-router-dom";
+import { Spin } from "antd";
 
 const Home = ({ data, setData }) => {
   const [currentPhoto, setCurrentPhoto] = useState({});
@@ -36,6 +37,10 @@ const Home = ({ data, setData }) => {
               <Button type={"button"} text={"Add new photo"}></Button>
             </Link>
           </div>
+          {
+          Object.keys(data).length === 0 ? (
+          <Spin className="spin" size="large" />
+      ):
           <div className="cards-container">
             {data?.map((photo, index) => {
               return (
@@ -64,7 +69,7 @@ const Home = ({ data, setData }) => {
               );
             })}
           </div>
-        </div>
+  }  </div>
       )}
     </div>
   );

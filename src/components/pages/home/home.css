@@ -28,3 +28,9 @@ body{
 .header > h1{
   color: white !important;
 }
+.spin{
+  margin: 20px;
+}
+.ant-spin-dot-item{
+  background: black;
+}
