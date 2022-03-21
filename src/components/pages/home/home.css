@@ -1,21 +1,19 @@
 body{
-  background-image: url("https://images.pexels.com/photos/1231171/pexels-photo-1231171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  /* background-image: url("https://images.pexels.com/photos/1231171/pexels-photo-1231171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-size: cover;
-  background-attachment: fixed;
- 
-  /* background-color: white; */
+  background-attachment: fixed; */
   text-align: center;
+  background:#ecf1f5;
 }
 
 .cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background:#ecf1f5;
   
 }
 .cards-container > div {
-  width: 350px;
+  width: 250px;
   margin: 5px;
   
 }

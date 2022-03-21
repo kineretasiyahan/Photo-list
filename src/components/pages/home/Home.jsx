@@ -5,10 +5,15 @@ import CurrentPhoto from "../photo/CurrentPhoto";
 import "./home.css";
 import { Link } from "react-router-dom";
 import { Spin } from "antd";
+import Pagination from "../../features/pagination/Pagination";
 
 const Home = ({ data, setData }) => {
   const [currentPhoto, setCurrentPhoto] = useState({});
   const [isDesplay, setIsDesplay] = useState(false);
+  const [photosPerPage] =useState(100)
+  const [currentPage, setCurrentPage] = useState(1);
+  const indexOfLastPhoto = currentPage * photosPerPage; //100
+  const indexOfFirstPhoto = indexOfLastPhoto - photosPerPage; //0
 
   const clickToCurrentPhoto = (select) => {
     setCurrentPhoto(select);
@@ -20,6 +25,8 @@ const Home = ({ data, setData }) => {
   const deletePhoto = ({ id }) => {
     setData(data.filter((item) => item.id !== id));
   };
+  const paginate=(number)=>setCurrentPage(number)
+ const photosArray=data?.slice( indexOfFirstPhoto , indexOfLastPhoto)
   return (
     <div>
       {isDesplay ? (
@@ -34,7 +41,7 @@ const Home = ({ data, setData }) => {
           <div className="header">
             <h1>PHOTO LIST</h1>
             <Link to={"/Photo-list/Photo-list/AddPhoto"}>
-              <Button type={"button"} text={"Add new photo"}></Button>
+              <Button type={"button"} text={"Add photo"}></Button>
             </Link>
           </div>
           {
@@ -42,7 +49,7 @@ const Home = ({ data, setData }) => {
           <Spin className="spin" size="large" />
       ):
           <div className="cards-container">
-            {data?.map((photo, index) => {
+            {photosArray?.map((photo, index) => {
               return (
                 <div key={index}>
                   {" "}
@@ -71,6 +78,7 @@ const Home = ({ data, setData }) => {
           </div>
   }  </div>
       )}
+   <Pagination photosPerPage={photosPerPage} totalPhotos={data.length} paginate={paginate}/>
     </div>
   );
 };

@@ -29,9 +29,10 @@ const CurrentPhoto = ({
   const editPhoto = () => {
     const newData = data.map((photo) => {
       if (photo === selectedPhoto) {
-        photo.title = photoDetailes.title;
-        photo.url = photoDetailes.url;
-        photo.id = photoDetailes.id;
+        // photo.title = photoDetailes.title;
+        // photo.url = photoDetailes.url;
+        // photo.id = photoDetailes.id;
+        photo=photoDetailes;
       }
       return photo;
     });

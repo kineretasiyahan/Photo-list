@@ -1,0 +1,15 @@
+.number {
+    margin: 3px;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: #ecf1f5;
+    color: black;
+    cursor: pointer;
+    line-height: 20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+ .number:hover{
+    background-color: rgb(190, 192, 192);
+  }
+  
