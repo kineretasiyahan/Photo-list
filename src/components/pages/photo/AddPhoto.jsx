@@ -28,7 +28,7 @@ const AddPhoto = ({ data, setData }) => {
         alert("The title or url already exists");
         return;
       }
-      setData([ ...data,newPhoto]);
+      setData([newPhoto, ...data]);
     });
   };
   return (
